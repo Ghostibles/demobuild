@@ -7,6 +7,11 @@ on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
+    
+env:
+  AZURE_WEBAPP_NAME: jcgitdeploytestapp
+  AZURE_WEBAPP_PACKAGEPATH: '.'
+  
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,4 +39,8 @@ jobs:
       - name: Build
         run: dotnet build
         
+      - name: Deploy to azure web app
+        uses: Azure/static-web-apps-deploy@v1
+        with:
+          app-name: {{}}
       
