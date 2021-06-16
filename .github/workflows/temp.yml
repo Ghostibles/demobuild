@@ -53,7 +53,7 @@ jobs:
           id: deploy-to-webapp
           uses: azure/webapps-deploy@v2
           with:
-            app-name: 'jcgitdeplottestapp'
+            app-name: 'jcgitdeploytestapp'
             slot-name: 'production'
             publish-profile: ${{ secrets.AzureAppService_PublishProfile_53f4ad73d5494bdc8c1b2c441fbeca81 }}
             package: '.'
