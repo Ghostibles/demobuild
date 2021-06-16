@@ -45,7 +45,7 @@ jobs:
       
       steps:
         - name: download artifact from build job
-          uses: actions/downloadartifact@v2
+          uses: actions/download-artifact@v2
           with:
             name: .net-app
         
